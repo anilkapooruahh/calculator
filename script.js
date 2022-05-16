@@ -46,7 +46,7 @@ evaluate = () => {
     secondOperand = currentOperation.textContent
     currentOperation.textContent = operate(currentOperator, firstOperand, secondOperand)
     lastOperation.textContent = `${firstOperand} ${currentOperator} ${secondOperand} =`
-    currentOperator = null
+   
 }
 
 
