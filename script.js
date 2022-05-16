@@ -9,6 +9,7 @@ const operatorButtons = document.querySelectorAll('button.op')
 const equalButton = document.querySelector('button.equal')
 const currentOperation = document.querySelector('div.currentOperand')
 const lastOperation = document.querySelector('div.lastOperand')
+const clearButton = document.querySelector('button.clear')
 
 //Event handling
 numberButtons.forEach(button => {
@@ -20,6 +21,15 @@ operatorButtons.forEach(button => {
 })
 
 equalButton.addEventListener('click', () => evaluate())
+
+
+clearButton.addEventListener('click', () => clear())
+
+const clear = () => {
+    currentOperation.textContent = ''
+    lastOperation.textContent = ''
+    currentOperator = null
+}
 
 const addNumber = number => {
     if (currentOperation.textContent === '0' || isScreenReset) {
